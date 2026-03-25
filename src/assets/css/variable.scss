@@ -1,6 +1,41 @@
+$extra-small: 10px;
+$small: 12px;
+$text: 18px;
+$highlight: 24px;
+$title: 48px;
+
 :root  {
     --background: #fff;
     --accent: #FF6060;
     --dark: #000000;
     --grey: #E3E3E3;
 }
+
+.bold {
+    font-weight: 700;
+}
+
+.title {
+    font-size: $title;
+
+    @include md {
+        font-size: $highlight;
+    }
+}
+
+.highlight {
+    font-size: $highlight;
+
+    @include md {
+        font-size: $text;
+    }
+}
+
+.text {
+    font-size: $text;
+
+    @include md {
+        font-size: $small;
+    }
+}
+

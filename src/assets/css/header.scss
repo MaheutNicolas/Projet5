@@ -1,0 +1,29 @@
+.header {
+    text-decoration: none;
+    color: var(--dark);
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.nav {
+    display: flex;
+    gap: 57px;
+
+    @include sm {
+        gap: 27px;
+    }
+
+    &-link {
+        @extend .highlight;
+        text-decoration: none;
+        color: var(--dark);
+
+        &:hover {
+            text-decoration: solid var(--dark) underline;
+        }
+    }
+}
