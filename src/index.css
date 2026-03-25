@@ -1,0 +1,19 @@
+:root {
+  --background: #fff;
+  --accent: #FF6060;
+  --dark: #000000;
+  --grey: #E3E3E3; }
+
+#root {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  align-items: center; }
+
+main, header {
+  max-width: 1240px;
+  width: 100%;
+  padding: 20px; }
+
+/*# sourceMappingURL=index.css.map */

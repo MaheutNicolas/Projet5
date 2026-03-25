@@ -1,0 +1,14 @@
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+main, header {
+    max-width: 1240px;
+    width: 100%;
+    padding: 20px;
+}
+
