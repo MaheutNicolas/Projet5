@@ -1,26 +1,33 @@
-function Home() {
-  return (
-    <div className="page">
-      <section id="dashboard" className="page-header">
-        <h1>Dashboard 📊</h1>
-        <p>Bienvenue chez Shiny, votre agence spécialisée dans le développement web.</p>
-      </section>
+import { Component } from 'react';
+import Card from '../components/home/card';
+import getData from '../data/Getter';
 
-      <section id="projects" className="dashboard-section">
-        <h2>Projets récents</h2>
-        <div className="projects-grid">
-        
-        </div>
-      </section>
+class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: [] };
+  }
 
-      <section id="employees" className="dashboard-section">
-        <h2>Équipe</h2>
-        <div className="employees-grid">
-         
-        </div>
-      </section>
-    </div>
-  )
+  async componentDidMount() {
+    const data = await getData();
+    this.setState({ data });
+  }
+
+  render() {
+    const { data } = this.state;
+    return (
+      <>
+        <section id="presentation" className="presentation">
+          <h1>Chez vous, partout et ailleurs</h1>
+        </section>
+        <section id="locations" className="locations">
+          {data.map((it, index) => (
+            <Card key={index} name={it.title} img={it.cover} />
+          ))}
+        </section>
+      </>
+    );
+  }
 }
 
 export default Home

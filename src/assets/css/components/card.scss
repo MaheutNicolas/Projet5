@@ -1,0 +1,13 @@
+.card {
+    width: 100%;
+
+    &-shadow {
+        height: 50%;
+        width: 100%;
+        background: linear-gradient(to top, 0% var(--dark), 100% transparent);
+    }
+
+    &-name {
+        @extend .text;
+    }
+}
