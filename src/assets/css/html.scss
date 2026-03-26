@@ -8,7 +8,7 @@
 
 main, header {
     max-width: 1240px;
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 20px;
 }
 

@@ -1,0 +1,9 @@
+.locations {
+    width: calc(100% - 100px);
+    display: grid;
+    border-radius: $rounded;
+    padding: 50px;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--grey);
+}
