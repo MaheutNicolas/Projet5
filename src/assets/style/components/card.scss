@@ -1,5 +1,3 @@
-@use "../variable";
-
 .card {
     width: 100%;
 
@@ -16,8 +14,4 @@
     &-name {
         @extend .text;
     }
-}
-
-.root {
-    
 }
