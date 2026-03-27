@@ -15,6 +15,7 @@ class Home extends Component {
 
   render() {
     const { data } = this.state;
+
     return (
       <>
         <section id="presentation" className="presentation">
@@ -22,7 +23,7 @@ class Home extends Component {
         </section>
         <section id="locations" className="locations">
           {data.map((it, index) => (
-            <Card key={index} name={it.title} img={it.cover} />
+            <Card key={index} id={it.id} name={it.title} img={it.cover} />
           ))}
         </section>
       </>

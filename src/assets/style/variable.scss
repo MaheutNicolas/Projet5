@@ -12,33 +12,7 @@ $rounded-small: 10px;
     --accent: #FF6060;
     --dark: #000000;
     --grey: #E3E3E3;
+    --light-grey: #F6F6F6;
 }
 
-.bold {
-    font-weight: 700;
-}
-
-.title {
-    font-size: $title;
-
-    @include md {
-        font-size: $highlight;
-    }
-}
-
-.highlight {
-    font-size: $highlight;
-
-    @include md {
-        font-size: $text;
-    }
-}
-
-.text {
-    font-size: $text;
-
-    @include md {
-        font-size: $small;
-    }
-}
 

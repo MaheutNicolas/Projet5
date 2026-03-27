@@ -7,6 +7,17 @@
         align-items: center;
         justify-content: space-between;
     }
+
+    &-link {
+        width: 210px;
+        @include md {
+            max-width: 40%;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 .nav {
@@ -18,10 +29,11 @@
     }
 
     &-link {
-        @extend .highlight;
+        @extend .rezisable-highlight;
         text-decoration: none;
         color: var(--dark);
-
+        width: fit-content;
+        max-width: 50%;
         &:hover {
             text-decoration: solid var(--dark) underline;
         }

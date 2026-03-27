@@ -1,0 +1,33 @@
+.bold {
+    font-weight: 700;
+}
+
+.title, .rezisable-title {
+    font-size: $title;
+}
+
+.highlight, .rezisable-highlight {
+    font-size: $highlight;
+}
+
+.text, .rezisable-text {
+    font-size: $text;
+}
+
+.rezisable-title {
+    @include md {
+        font-size: $highlight;
+    }
+}
+
+.rezisable-highlight {
+    @include md {
+        font-size: $text;
+    }
+}
+
+.rezisable-text {
+    @include md {
+        font-size: $small;
+    }
+}
