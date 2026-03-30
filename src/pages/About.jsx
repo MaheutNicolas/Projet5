@@ -1,23 +1,15 @@
+import Banner from '../components/Banner';
+import img from '../assets/image/banner_about.webp';
+
 function About() {
   return (
     <div className="page">
-      <section id="dashboard" className="page-header">
-        <h1>Dashboard 📊</h1>
-        <p>Bienvenue chez Shiny, votre agence spécialisée dans le développement web.</p>
+      <section id="presentation" className="presentation">
+        <Banner img={img} />
       </section>
 
-      <section id="projects" className="dashboard-section">
-        <h2>Projets récents</h2>
-        <div className="projects-grid">
+      <section id="faq" className="faq">
         
-        </div>
-      </section>
-
-      <section id="employees" className="dashboard-section">
-        <h2>Équipe</h2>
-        <div className="employees-grid">
-         
-        </div>
       </section>
     </div>
   )

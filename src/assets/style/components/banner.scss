@@ -1,0 +1,32 @@
+.banner {
+    position: relative;
+    height: 223px;
+
+    @include md {
+        height: 111px;
+    }
+    
+    &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: $rounded;
+
+        @include md {
+            border-radius: $rounded-small;
+        }
+    }
+
+    &-text {
+        @extend .rezisable-title;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--background);
+
+        @include md {
+            left: 20%;
+            transform: translate(-20%, -50%);
+        }
+    }
+}

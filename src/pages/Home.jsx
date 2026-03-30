@@ -1,6 +1,8 @@
 import { Component } from 'react';
-import Card from '../components/home/card';
+import Card from '../components/home/Card';
 import getData from '../data/Getter';
+import Banner from '../components/Banner';
+import img from '../assets/image/banner_home.webp';
 
 class Home extends Component {
   constructor(props) {
@@ -19,7 +21,7 @@ class Home extends Component {
     return (
       <>
         <section id="presentation" className="presentation">
-          <h1>Chez vous, partout et ailleurs</h1>
+          <Banner text="Chez vous, partout et ailleurs" img={img} />
         </section>
         <section id="locations" className="locations">
           {data.map((it, index) => (
