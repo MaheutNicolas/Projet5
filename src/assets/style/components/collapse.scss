@@ -1,0 +1,45 @@
+.collapse {
+    width: 100%;
+
+    &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: var(--accent);
+        color: var(--background);
+        border-radius: 5px;
+    }
+
+    &-content {
+        background-color: var(--light-grey);
+        height: 0;
+        overflow: hidden;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    &-title {
+        @extend .rezisable-highlight;
+    }
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--background);
+  border-right: 3px solid var(--background);
+  transition: transform 0.3s ease;
+
+  &.up {
+    margin-top: 6px;
+    transform: rotate(-45deg);
+  }
+
+  &.down {
+    margin-bottom: 6px;
+    transform: rotate(135deg);
+  }
+}

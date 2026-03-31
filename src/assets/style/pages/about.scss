@@ -1,0 +1,21 @@
+.page.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .presentation {
+        width: 100%;
+    }
+
+    .faq {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @include md {
+            width: 100%;
+        }
+    }
+}
