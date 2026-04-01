@@ -4,7 +4,7 @@ function Banner({ img, text = null, alt = "", hx = "h1"  }) {
 
     return (
         <>
-            <div className="banner">
+            <div className={"banner" + (text ? " dark" : "")}>
                 <img src={img} alt={alt} className="banner-img" />
                 { text ? 
                     (
