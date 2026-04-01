@@ -15,4 +15,44 @@ $rounded-small: 10px;
     --light-grey: #F6F6F6;
 }
 
+button {
+    appearance: none;
+    -webkit-appearance: none; /* Safari */
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--background);
+  border-right: 3px solid var(--background);
+  transition: transform 0.3s ease;
+
+  &.up {
+    margin-top: 6px;
+    transform: rotate(-45deg);
+  }
+
+  &.down {
+    margin-bottom: 6px;
+    transform: rotate(135deg);
+  }
+
+  &.right {
+    margin-bottom: 6px;
+    transform: rotate(45deg);
+  }
+
+  &.left {
+    margin-bottom: 6px;
+    transform: rotate(-135deg);
+  }
+}
 

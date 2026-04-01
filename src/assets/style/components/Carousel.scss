@@ -1,0 +1,66 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 445px;
+    overflow: hidden;
+
+    @include md {
+        height: 225px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gradient {
+        position: absolute;
+        width: 100px;
+        height: 100%;
+
+        &.left {
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right, rgba(0,0,0,0.6), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.right {
+            top: 0;
+            right: 0;
+            background: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &.bottom {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 12px;
+        }
+    }
+
+    &-compteur {
+        @extend .rezisable-highlight;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+    }
+
+    .arrow {
+        width: 32px;
+        height: 32px;
+        border-width: 6px;
+    }
+}

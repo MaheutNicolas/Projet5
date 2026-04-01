@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import getData from '../data/Getter';
+import Carousel from '../components/Carousel';
 
 function Logement() {
   const [logement, setLogement] = useState(null);
@@ -20,11 +21,14 @@ function Logement() {
     }
     fetchData();
   }, [id, navigate]);
-
+  
+  if (!logement) return null; 
+  let pictures = logement.pictures;
+  
   return (
     <>
       <section id="presentation" className="presentation">
-        <h1>Chez vous, partout et ailleurs</h1>
+        <Carousel images={pictures} />
       </section>
       <section id="locations" className="locations">
         

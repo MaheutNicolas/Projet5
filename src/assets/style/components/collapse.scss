@@ -24,22 +24,3 @@
         @extend .rezisable-highlight;
     }
 }
-
-.arrow {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid var(--background);
-  border-right: 3px solid var(--background);
-  transition: transform 0.3s ease;
-
-  &.up {
-    margin-top: 6px;
-    transform: rotate(-45deg);
-  }
-
-  &.down {
-    margin-bottom: 6px;
-    transform: rotate(135deg);
-  }
-}

@@ -6,6 +6,43 @@
   --light-grey: #F6F6F6;
 }
 
+button {
+  appearance: none;
+  -webkit-appearance: none; /* Safari */
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-top: 3px solid var(--background);
+  border-right: 3px solid var(--background);
+  transition: transform 0.3s ease;
+}
+.arrow.up {
+  margin-top: 6px;
+  transform: rotate(-45deg);
+}
+.arrow.down {
+  margin-bottom: 6px;
+  transform: rotate(135deg);
+}
+.arrow.right {
+  margin-bottom: 6px;
+  transform: rotate(45deg);
+}
+.arrow.left {
+  margin-bottom: 6px;
+  transform: rotate(-135deg);
+}
+
 .bold {
   font-weight: 700;
 }
@@ -14,7 +51,7 @@
   font-size: 48px;
 }
 
-.highlight, .rezisable-highlight, .collapse-title, .nav-link {
+.highlight, .rezisable-highlight, .carousel-compteur, .collapse-title, .nav-link {
   font-size: 24px;
 }
 
@@ -29,7 +66,7 @@
 }
 
 @media (max-width: 768px) {
-  .rezisable-highlight, .collapse-title, .nav-link {
+  .rezisable-highlight, .carousel-compteur, .collapse-title, .nav-link {
     font-size: 18px;
   }
 }
@@ -229,21 +266,64 @@ h1, h1, h3, h4, h5 {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.arrow {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid var(--background);
-  border-right: 3px solid var(--background);
-  transition: transform 0.3s ease;
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 445px;
+  overflow: hidden;
 }
-.arrow.up {
-  margin-top: 6px;
-  transform: rotate(-45deg);
+@media (max-width: 768px) {
+  .carousel {
+    height: 225px;
+  }
 }
-.arrow.down {
-  margin-bottom: 6px;
-  transform: rotate(135deg);
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel .gradient {
+  position: absolute;
+  width: 100px;
+  height: 100%;
+}
+.carousel .gradient.left {
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .gradient.right {
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.6), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .gradient.bottom {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 12px;
+}
+.carousel-compteur {
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+.carousel .arrow {
+  width: 32px;
+  height: 32px;
+  border-width: 6px;
 }
 
 .locations {
