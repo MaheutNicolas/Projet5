@@ -1,0 +1,14 @@
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-top: -10px;
+}
+
+.star {
+  font-size: 40px;
+  color: var(--grey);
+
+  &.active {
+    color: var(--accent);
+  }
+}

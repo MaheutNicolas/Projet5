@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import getData from '../data/Getter';
 import Carousel from '../components/Carousel';
+import Tags from '../components/Tags';
+import Stars from '../components/Star';
+import Collapse from '../components/Collapse';
 
 function Logement() {
   const [logement, setLogement] = useState(null);
@@ -27,11 +30,26 @@ function Logement() {
   
   return (
     <>
-      <section id="presentation" className="presentation">
+      <section id="logement" className="logement">
         <Carousel images={pictures} />
-      </section>
-      <section id="locations" className="locations">
-        
+        <div className='flex space-between'>
+          <div className='flex column'>
+            <h1 className='logement-title'>{logement.title}</h1>
+            <p className='logement-location'>{logement.location}</p>
+          </div>
+          <div className='logement-host'>
+            <span className='logement-host-name'>{logement.host.name}</span>
+            <img className='logement-host-picture' src={ logement.host.picture } alt="" />
+          </div>
+        </div>
+        <div className='logement-tags-stars'>
+            <Tags names={logement.tags} />
+            <Stars rating={logement.rating}/>
+        </div>
+        <div className='logement-collapses'>
+            <Collapse title="Description" text={logement.description} />
+            <Collapse title="Équipements" text={logement.equipments} />
+        </div>
       </section>
     </>
   );

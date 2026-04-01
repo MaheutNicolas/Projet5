@@ -6,6 +6,10 @@
   --light-grey: #F6F6F6;
 }
 
+ul {
+  margin: 0;
+}
+
 button {
   appearance: none;
   -webkit-appearance: none; /* Safari */
@@ -47,7 +51,7 @@ button {
   font-weight: 700;
 }
 
-.title, .rezisable-title, .banner-text {
+.title, .rezisable-title, .logement-title, .banner-text {
   font-size: 48px;
 }
 
@@ -55,12 +59,12 @@ button {
   font-size: 24px;
 }
 
-.text, .card-name, .rezisable-text {
+.text, .card-name, .rezisable-text, .logement-host-name, .logement-location {
   font-size: 18px;
 }
 
 @media (max-width: 768px) {
-  .rezisable-title, .banner-text {
+  .rezisable-title, .logement-title, .banner-text {
     font-size: 24px;
   }
 }
@@ -72,7 +76,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  .rezisable-text {
+  .rezisable-text, .logement-host-name, .logement-location {
     font-size: 12px;
   }
 }
@@ -281,6 +285,12 @@ h1, h1, h3, h4, h5 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 25px;
+}
+@media (max-width: 768px) {
+  .carousel img {
+    border-radius: 10px;
+  }
 }
 .carousel .gradient {
   position: absolute;
@@ -294,6 +304,14 @@ h1, h1, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+@media (max-width: 768px) {
+  .carousel .gradient.left {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
 }
 .carousel .gradient.right {
   top: 0;
@@ -302,6 +320,14 @@ h1, h1, h3, h4, h5 {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+@media (max-width: 768px) {
+  .carousel .gradient.right {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 .carousel .gradient.bottom {
   bottom: 0;
@@ -313,6 +339,14 @@ h1, h1, h3, h4, h5 {
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 12px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+@media (max-width: 768px) {
+  .carousel .gradient.bottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 }
 .carousel-compteur {
   margin-bottom: 20px;
@@ -324,6 +358,39 @@ h1, h1, h3, h4, h5 {
   width: 32px;
   height: 32px;
   border-width: 6px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  background-color: var(--accent);
+  color: var(--background);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 30px;
+  border-radius: 20px;
+  height: max-content;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+  margin-top: -10px;
+}
+
+.star {
+  font-size: 40px;
+  color: var(--grey);
+}
+.star.active {
+  color: var(--accent);
 }
 
 .locations {
@@ -369,4 +436,77 @@ h1, h1, h3, h4, h5 {
   .page.about .faq {
     width: 100%;
   }
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+.error-title {
+  font-size: 288px;
+  color: var(--accent);
+}
+@media (max-width: 768px) {
+  .error-title {
+    font-size: 96px;
+  }
+}
+.error-paragraphe {
+  font-size: 36px;
+  color: var(--accent);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .error-paragraphe {
+    font-size: 18px;
+  }
+}
+.error-link {
+  color: black;
+}
+
+.logement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.logement-title {
+  color: var(--accent);
+}
+.logement-location {
+  color: var(--dark);
+}
+.logement-host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.logement-host-name {
+  color: var(--accent);
+}
+.logement-host-picture {
+  border-radius: 99px;
+  width: 64px;
+}
+.logement-tags-stars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logement-collapses {
+  display: flex;
+  gap: 20px;
+}
+.logement .flex {
+  display: flex;
+}
+.logement .column {
+  flex-direction: column;
+}
+.logement .space-between {
+  justify-content: space-between;
 }/*# sourceMappingURL=index.css.map */

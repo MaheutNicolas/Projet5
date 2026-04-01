@@ -12,6 +12,11 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: $rounded;
+
+        @include md {
+            border-radius: $rounded-small;
+        }
     }
 
     .gradient {
@@ -26,6 +31,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-top-left-radius: $rounded;
+            border-bottom-left-radius: $rounded;
+
+            @include md {
+                border-top-left-radius: $rounded-small;
+                border-bottom-left-radius: $rounded-small;
+            }
+
         }
 
         &.right {
@@ -35,6 +48,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border-top-right-radius: $rounded;
+            border-bottom-right-radius: $rounded;
+
+            @include md {
+                border-top-right-radius: $rounded-small;
+                border-bottom-right-radius: $rounded-small;
+            }
         }
 
         &.bottom {
@@ -47,6 +67,13 @@
             align-items: flex-end;
             justify-content: center;
             padding-bottom: 12px;
+            border-bottom-left-radius: $rounded;
+            border-bottom-right-radius: $rounded;
+
+            @include md {
+                border-bottom-left-radius: $rounded-small;
+                border-bottom-right-radius: $rounded-small;
+            }
         }
     }
 

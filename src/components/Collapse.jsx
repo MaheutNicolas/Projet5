@@ -25,7 +25,17 @@ function Collapse({ title, text, hx = "h4" }) {
                 <span className={`arrow ${isOpen ? "up" : "down"}`}></span>
             </div>
             <div ref={contentRef} className="collapse-content">
-                <p className="collapse-text">{text}</p>
+                {
+                    Array.isArray(text) ? 
+                    ( <ul>
+                        { text.map((item) => (
+                            <li>{item}</li>
+                        ))}
+                    </ul> ) :
+                    ( <p className="collapse-text">{text}</p> )
+                    
+                }
+                
             </div>
         </div>
     );

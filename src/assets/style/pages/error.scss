@@ -1,0 +1,33 @@
+.error{
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-title {
+        font-size: 288px;
+        color: var(--accent);
+
+        @include md {
+            font-size: 96px;
+        }
+    }
+
+    &-paragraphe {
+        font-size: 36px;
+        color: var(--accent);
+        text-align: center;
+
+        @include md {
+            font-size: 18px;
+        }
+    }
+
+    &-link {
+        color: black;
+    }
+}
