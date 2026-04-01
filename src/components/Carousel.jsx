@@ -27,7 +27,6 @@ function Carousel({ images }) {
           {current + 1}/{images.length}
         </span>
       </div>
-
     </div>
   );
 }

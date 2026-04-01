@@ -47,8 +47,8 @@ function Logement() {
             <Stars rating={logement.rating}/>
         </div>
         <div className='logement-collapses'>
-            <Collapse title="Description" text={logement.description} />
-            <Collapse title="Équipements" text={logement.equipments} />
+            <Collapse key={"Description"} title="Description" text={logement.description} />
+            <Collapse key={"Équipements"} title="Équipements" text={logement.equipments} />
         </div>
       </section>
     </>
