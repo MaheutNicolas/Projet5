@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Component } from 'react';
 import logo from '../../assets/image/logo.svg';
 
@@ -11,8 +11,12 @@ class Header extends Component {
             <img src={logo} alt="Logo Kasa"/>
           </Link>
           <nav className="nav">
-            <Link to="/" className="nav-link">Acceuil</Link>
-            <Link to="/a-propos" className="nav-link">A Propos</Link>
+            <NavLink to="/"  className={({ isActive }) => isActive ? "nav-link active" : "nav-link" } >
+              Acceuil
+            </NavLink>
+            <NavLink to="/a-propos" className={({ isActive }) => isActive ? "nav-link active" : "nav-link" } >
+              A Propos
+            </NavLink>
           </nav>
         </div>
       </header>

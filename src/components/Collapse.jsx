@@ -29,13 +29,12 @@ function Collapse({ title, text, hx = "h4" }) {
                     Array.isArray(text) ? 
                     ( <ul>
                         { text.map((item) => (
-                            <li>{item}</li>
+                            <li key={item}>{item}</li>
                         ))}
                     </ul> ) :
                     ( <p className="collapse-text">{text}</p> )
                     
                 }
-                
             </div>
         </div>
     );

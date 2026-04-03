@@ -23,6 +23,7 @@
         &-name {
             @extend .rezisable-text;
             color: var(--accent);
+            width: min-content;
         }
     
         &-picture {
@@ -40,6 +41,10 @@
     &-collapses {
         display: flex;
         gap: 20px;
+
+        @include md {
+            flex-direction: column;
+        }
     }
 
     .flex {
@@ -52,6 +57,10 @@
 
     .space-between {
         justify-content: space-between;
+    }
+
+    .gap-20 {
+        gap: 10px;
     }
 }
 

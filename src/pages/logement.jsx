@@ -32,20 +32,42 @@ function Logement() {
     <>
       <section id="logement" className="logement">
         <Carousel images={pictures} />
-        <div className='flex space-between'>
-          <div className='flex column'>
+
+        <div className='desktop'>
+          <div className='flex space-between'>
+            <div className='flex column'>
+              <h1 className='logement-title'>{logement.title}</h1>
+              <p className='logement-location'>{logement.location}</p>
+            </div>
+            <div className='logement-host'>
+              <span className='logement-host-name'>{logement.host.name}</span>
+              <img className='logement-host-picture' src={ logement.host.picture } alt="" />
+            </div>
+          </div>
+          <div className='logement-tags-stars'>
+              <Tags names={logement.tags} />
+              <Stars rating={logement.rating}/>
+          </div>
+        </div>
+
+        <div className='mobile'>
+          <div className='flex column gap-20'>
             <h1 className='logement-title'>{logement.title}</h1>
             <p className='logement-location'>{logement.location}</p>
-          </div>
-          <div className='logement-host'>
-            <span className='logement-host-name'>{logement.host.name}</span>
-            <img className='logement-host-picture' src={ logement.host.picture } alt="" />
-          </div>
-        </div>
-        <div className='logement-tags-stars'>
             <Tags names={logement.tags} />
-            <Stars rating={logement.rating}/>
+          </div>
+          <div className='flex space-between'>
+              <div className='logement-tags-stars'>
+                <Stars rating={logement.rating}/>
+            </div>
+            <div className='logement-host'>
+              <span className='logement-host-name'>{logement.host.name}</span>
+              <img className='logement-host-picture' src={ logement.host.picture } alt="" />
+            </div>
+          
+          </div>
         </div>
+
         <div className='logement-collapses'>
             <Collapse key={"Description"} title="Description" text={logement.description} />
             <Collapse key={"Équipements"} title="Équipements" text={logement.equipments} />

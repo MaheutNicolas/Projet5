@@ -1,3 +1,21 @@
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.desktop {
+  display: block;
+}
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+}
+
 :root {
   --background: #fff;
   --accent: #FF6060;
@@ -77,7 +95,7 @@ button {
 
 @media (max-width: 768px) {
   .rezisable-text, .logement-host-name, .logement-location {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -168,7 +186,7 @@ h1, h1, h3, h4, h5 {
   width: fit-content;
   max-width: 50%;
 }
-.nav-link:hover {
+.nav-link:hover, .nav-link.active {
   text-decoration: solid var(--dark) underline;
 }
 
@@ -378,6 +396,11 @@ h1, h1, h3, h4, h5 {
   border-radius: 20px;
   height: max-content;
 }
+@media (max-width: 768px) {
+  .tag {
+    font-size: 10px;
+  }
+}
 
 .stars {
   display: flex;
@@ -487,6 +510,7 @@ h1, h1, h3, h4, h5 {
 }
 .logement-host-name {
   color: var(--accent);
+  width: min-content;
 }
 .logement-host-picture {
   border-radius: 99px;
@@ -501,6 +525,11 @@ h1, h1, h3, h4, h5 {
   display: flex;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  .logement-collapses {
+    flex-direction: column;
+  }
+}
 .logement .flex {
   display: flex;
 }
@@ -509,4 +538,7 @@ h1, h1, h3, h4, h5 {
 }
 .logement .space-between {
   justify-content: space-between;
+}
+.logement .gap-20 {
+  gap: 10px;
 }/*# sourceMappingURL=index.css.map */

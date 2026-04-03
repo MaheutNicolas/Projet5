@@ -34,7 +34,7 @@
         color: var(--dark);
         width: fit-content;
         max-width: 50%;
-        &:hover {
+        &:hover, &.active {
             text-decoration: solid var(--dark) underline;
         }
     }

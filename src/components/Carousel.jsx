@@ -10,23 +10,25 @@ function Carousel({ images }) {
   return (
     <div className="carousel">
       <img src={images[current]} alt="" />
+      {
+        images.length === 1 ? 
+          <></> :
+          <>
+            <button onClick={prev} className="gradient left" >
+              <div className="arrow left" />
+            </button>
 
-      {/* Gradient gauche */}
-      <button onClick={prev} className="gradient left" >
-        <div className="arrow left" />
-      </button>
+            <button onClick={next}  className="gradient right" >
+              <div className="arrow right" />
+            </button>
 
-      {/* Gradient droit */}
-      <button onClick={next}  className="gradient right" >
-        <div className="arrow right" />
-      </button>
-
-      {/* Gradient bas + compteur */}
-      <div  className="gradient bottom" >
-        <span className="carousel-compteur" >
-          {current + 1}/{images.length}
-        </span>
-      </div>
+            <div  className="gradient bottom" >
+              <span className="carousel-compteur" >
+                {current + 1}/{images.length}
+              </span>
+            </div>
+          </>
+      }
     </div>
   );
 }
